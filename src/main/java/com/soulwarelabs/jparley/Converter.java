@@ -28,6 +28,8 @@ package com.soulwarelabs.jparley;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.soulwarelabs.jcommons.Optional;
+
 /**
  * SQL data converter.
  *
@@ -50,5 +52,6 @@ public interface Converter {
      *
      * @since v1.0
      */
-    Object apply(Connection connection, Object data) throws SQLException;
+    @Optional Object apply(Connection connection, @Optional Object data)
+            throws SQLException;
 }

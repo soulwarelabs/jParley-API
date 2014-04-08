@@ -27,6 +27,8 @@ package com.soulwarelabs.jparley;
 
 import java.sql.SQLException;
 
+import com.soulwarelabs.jcommons.Optional;
+
 /**
  * SQL subroutines executor.
  *
@@ -61,5 +63,6 @@ public interface Executor {
      *
      * @since v1.0
      */
-    Object call(Function function, Object ... parameters) throws SQLException;
+    @Optional Object call(Function function, @Optional Object ... parameters)
+            throws SQLException;
 }
