@@ -111,7 +111,7 @@ public interface Subroutine {
      *
      * @param index parameter index.
      * @param box boxed parameter initial value.
-     * @param type parameter SQL type.
+     * @param type parameter SQL type code.
      *
      * @see Box
      *
@@ -124,7 +124,7 @@ public interface Subroutine {
      *
      * @param index parameter index.
      * @param value parameter initial value.
-     * @param type parameter SQL type.
+     * @param type parameter SQL type code.
      *
      * @since v1.0
      */
@@ -135,7 +135,7 @@ public interface Subroutine {
      *
      * @param name parameter name.
      * @param box boxed parameter initial value.
-     * @param type parameter SQL type.
+     * @param type parameter SQL type code.
      *
      * @see Box
      *
@@ -148,7 +148,7 @@ public interface Subroutine {
      *
      * @param name parameter name.
      * @param value parameter initial value.
-     * @param type parameter SQL type.
+     * @param type parameter SQL type code.
      *
      * @since v1.0
      */

@@ -4,7 +4,7 @@
  *
  * File:     Procedure.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.06, 08 April 2014
+ * Revision: 1.07, 08 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -28,26 +28,126 @@ package com.soulwarelabs.jparley;
 import com.soulwarelabs.jcommons.Box;
 
 /**
+ * Common SQL stored procedure.
  *
- * @author gubarev
+ * @see Subroutine
+ *
+ * @since v1.0
+ *
+ * @author Ilya Gubarev
+ * @version 08 April 2014
  */
 public interface Procedure extends Subroutine {
 
-    Box<Object> setOutput(int index, int sqlType);
+    /**
+     * Sets a new output parameter
+     *
+     * @param index parameter index.
+     * @param type parameter SQL type code.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(int index, int type);
 
-    Box<Object> setOutput(String name, int sqlType);
+    /**
+     * Sets a new output parameter
+     *
+     * @param name parameter name.
+     * @param type parameter SQL type code.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(String name, int type);
 
-    Box<Object> setOutput(int index, int sqlType, String structName);
+    /**
+     * Sets a new output parameter
+     *
+     * @param index parameter index.
+     * @param type parameter SQL type code.
+     * @param struct parameter SQL structure name.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(int index, int type, String struct);
 
-    Box<Object> setOutput(String name, int sqlType, String structName);
+    /**
+     * Sets a new output parameter
+     *
+     * @param name parameter name.
+     * @param type parameter SQL type code.
+     * @param struct parameter SQL structure name.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(String name, int type, String struct);
 
-    Box<Object> setOutput(int index, int sqlType, Converter decoder);
+    /**
+     * Sets a new output parameter
+     *
+     * @param index parameter index.
+     * @param type parameter SQL type code.
+     * @param decoder parameter SQL decoder.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(int index, int type, Converter decoder);
 
-    Box<Object> setOutput(String name, int sqlType, Converter decoder);
+    /**
+     * Sets a new output parameter
+     *
+     * @param name parameter name.
+     * @param type parameter SQL type code.
+     * @param decoder parameter SQL decoder.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(String name, int type, Converter decoder);
 
-    Box<Object> setOutput(int index, int sqlType, String structName,
-            Converter decoder);
+    /**
+     * Sets a new output parameter
+     *
+     * @param index parameter index.
+     * @param type parameter SQL type code.
+     * @param struct parameter SQL structure name.
+     * @param decoder parameter SQL decoder.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(int index, int type, String struct, Converter decoder);
 
-    Box<Object> setOutput(String name, int sqlType, String structName,
-            Converter decoder);
+    /**
+     * Sets a new output parameter
+     *
+     * @param name parameter name.
+     * @param type parameter SQL type code.
+     * @param struct parameter SQL structure name.
+     * @param decoder parameter SQL decoder.
+     * @return boxed result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box output(String name, int type, String struct, Converter decoder);
 }
