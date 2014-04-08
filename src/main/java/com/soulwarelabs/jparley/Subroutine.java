@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.09, 08 April 2014
+ * Revision: 1.10, 08 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -28,6 +28,9 @@ package com.soulwarelabs.jparley;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.soulwarelabs.jcommons.Box;
+import com.soulwarelabs.jcommons.Optional;
+
 /**
  * Common SQL stored subroutine.
  *
@@ -39,9 +42,9 @@ import java.sql.SQLException;
 public interface Subroutine {
 
     /**
-     * Gets a full qualified name of the subroutine.
+     * Gets a full-qualified name of the subroutine.
      *
-     * @return full qualified name.
+     * @return full-qualified name.
      *
      * @since v1.0
      */
@@ -50,7 +53,7 @@ public interface Subroutine {
     /**
      * Executes the subroutine.
      *
-     * @param connection an SQL database connection.
+     * @param connection SQL database connection.
      * @throws SQLException if error occurs while executing the subroutine.
      *
      * @see Connection
@@ -60,77 +63,155 @@ public interface Subroutine {
     void execute(Connection connection) throws SQLException;
 
     /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param box boxed parameter initial value.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    void input(int index, Box box);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param value parameter initial value.
+     *
+     * @since v1.0
+     */
+    void input(int index, @Optional Object value);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param box boxed parameter initial value.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    void input(String name, Box box);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value.
+     *
+     * @since v1.0
+     */
+    void input(String name, @Optional Object value);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param box boxed parameter initial value.
+     * @param type parameter SQL type.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    void input(int index, Box box, int type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param value parameter initial value.
+     * @param type parameter SQL type.
+     *
+     * @since v1.0
+     */
+    void input(int index, @Optional Object value, int type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param box boxed parameter initial value.
+     * @param type parameter SQL type.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    void input(String name, Box box, int type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value.
+     * @param type parameter SQL type.
+     *
+     * @since v1.0
+     */
+    void input(String name, @Optional Object value, int type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param box boxed parameter initial value.
+     * @param encoder parameter SQL data encoder.
+     *
+     * @see Box
+     * @see Converter
+     *
+     * @since v1.0
+     */
+    void input(int index, Box box, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param value parameter initial value.
+     * @param encoder parameter SQL data encoder.
+     *
+     * @see Converter
+     *
+     * @since v1.0
+     */
+    void input(int index, @Optional Object value, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param box boxed parameter initial value.
+     * @param encoder parameter SQL data encoder.
+     *
+     * @see Box
+     * @see Converter
+     *
+     * @since v1.0
+     */
+    void input(String name, Box box, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value.
+     * @param encoder parameter SQL data encoder.
+     *
+     * @see Converter
+     *
+     * @since v1.0
+     */
+    void input(String name, @Optional Object value, Converter encoder);
+
+    /**
      * Resets the subroutine to its initial state.
      *
      * @since v1.0
      */
     void reset();
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param index an index of the parameter.
-     * @param value an initial value of the parameter.
-     *
-     * @since v1.0
-     */
-    void setInput(int index, Object value);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name a name of the parameter.
-     * @param value an initial value of the parameter.
-     *
-     * @since v1.0
-     */
-    void setInput(String name, Object value);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param index an index of the parameter.
-     * @param value an initial value of the parameter.
-     * @param sqlType a code of parameter SQL type.
-     *
-     * @since v1.0
-     */
-    void setInput(int index, Object value, Integer sqlType);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name a name of the parameter.
-     * @param value an initial value of the parameter.
-     * @param sqlType a code of parameter SQL type.
-     *
-     * @since v1.0
-     */
-    void setInput(String name, Object value, Integer sqlType);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param index an index of the parameter.
-     * @param value an initial value of the parameter.
-     * @param encoder an SQL data encoder for the parameter.
-     *
-     * @see Converter
-     *
-     * @since v1.0
-     */
-    void setInput(int index, Object value, Converter encoder);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name a name of the parameter.
-     * @param value an initial value of the parameter.
-     * @param encoder an SQL data encoder for the parameter.
-     *
-     * @see Converter
-     *
-     * @since v1.0
-     */
-    void setInput(String name, Object value, Converter encoder);
 }
