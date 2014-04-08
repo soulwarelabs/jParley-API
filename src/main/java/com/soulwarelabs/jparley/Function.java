@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.05, 08 April 2014
+ * Revision: 1.06, 08 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -25,10 +25,28 @@
  */
 package com.soulwarelabs.jparley;
 
+import com.soulwarelabs.jcommons.Box;
+
 /**
+ * Common SQL stored function.
  *
- * @author gubarev
+ * @see Subroutine
+ *
+ * @since v1.0
+ *
+ * @author Ilya Gubarev
+ * @version 08 April 2014
  */
 public interface Function extends Subroutine {
 
+    /**
+     * Gets a boxed result of the function.
+     *
+     * @return boxed function result.
+     *
+     * @see Box
+     *
+     * @since v1.0
+     */
+    Box getResult();
 }
