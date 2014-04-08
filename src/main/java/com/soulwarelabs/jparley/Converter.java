@@ -44,14 +44,14 @@ public interface Converter {
      * Converts specified data using an SQL connection.
      *
      * @param connection an SQL database connection.
-     * @param data data to be converted.
-     * @return converted data.
-     * @throws SQLException if error occurs while converting data.
+     * @param data data to be processed.
+     * @return processed data.
+     * @throws SQLException if error occurs while processing data.
      *
      * @see Connection
      *
      * @since v1.0
      */
-    @Optional Object apply(Connection connection, @Optional Object data)
+    @Optional Object process(Connection connection, @Optional Object data)
             throws SQLException;
 }
