@@ -25,7 +25,7 @@
  */
 package com.soulwarelabs.jparley;
 
-import com.soulwarelabs.jcommons.Hood;
+import com.soulwarelabs.jcommons.Box;
 
 /**
  *
@@ -33,21 +33,21 @@ import com.soulwarelabs.jcommons.Hood;
  */
 public interface Procedure extends Subroutine {
 
-    Hood<Object> setOutput(int index, int sqlType);
+    Box<Object> setOutput(int index, int sqlType);
 
-    Hood<Object> setOutput(String name, int sqlType);
+    Box<Object> setOutput(String name, int sqlType);
 
-    Hood<Object> setOutput(int index, int sqlType, String structName);
+    Box<Object> setOutput(int index, int sqlType, String structName);
 
-    Hood<Object> setOutput(String name, int sqlType, String structName);
+    Box<Object> setOutput(String name, int sqlType, String structName);
 
-    Hood<Object> setOutput(int index, int sqlType, Converter decoder);
+    Box<Object> setOutput(int index, int sqlType, Converter decoder);
 
-    Hood<Object> setOutput(String name, int sqlType, Converter decoder);
+    Box<Object> setOutput(String name, int sqlType, Converter decoder);
 
-    Hood<Object> setOutput(int index, int sqlType, String structName,
+    Box<Object> setOutput(int index, int sqlType, String structName,
             Converter decoder);
 
-    Hood<Object> setOutput(String name, int sqlType, String structName,
+    Box<Object> setOutput(String name, int sqlType, String structName,
             Converter decoder);
 }
