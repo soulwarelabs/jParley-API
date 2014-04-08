@@ -43,7 +43,7 @@ public interface Converter {
     /**
      * Converts specified data using an SQL connection.
      *
-     * @param connection an SQL database connection.
+     * @param connection SQL database connection.
      * @param data data to be processed.
      * @return processed data.
      * @throws SQLException if error occurs while processing data.

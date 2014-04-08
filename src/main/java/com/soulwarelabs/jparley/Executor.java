@@ -54,8 +54,8 @@ public interface Executor {
     /**
      * Executes specified SQL stored function.
      *
-     * @param function an SQL function to be executed.
-     * @param parameters function input parameters.
+     * @param function SQL function to be executed.
+     * @param parameters initial values of function input parameters.
      * @return function result.
      * @throws SQLException if error occurs while executing the function.
      *
