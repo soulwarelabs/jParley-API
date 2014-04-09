@@ -81,7 +81,7 @@
     <dependencies>
         <dependency>
             <groupId>com.soulwarelabs.jcommons</groupId>
-            <artifactId>jcommons-api</artifactId>
+            <artifactId>soulwarelabs-jcommons</artifactId>
             <version>${versions.libs.jcommons}</version>
         </dependency>
     </dependencies>
