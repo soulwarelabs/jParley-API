@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.10, 08 April 2014
+ * Revision: 1.11, 14 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -37,18 +37,9 @@ import com.soulwarelabs.jcommons.Optional;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 08 April 2014
+ * @version 14 April 2014
  */
 public interface Subroutine {
-
-    /**
-     * Gets a full-qualified name of the subroutine.
-     *
-     * @return full-qualified name.
-     *
-     * @since v1.0
-     */
-    String getName();
 
     /**
      * Executes the subroutine.
