@@ -80,10 +80,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.soulwarelabs.jcommons</groupId>
+            <groupId>com.soulwarelabs</groupId>
             <artifactId>soulwarelabs-jcommons</artifactId>
             <version>${versions.libs.jcommons}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
