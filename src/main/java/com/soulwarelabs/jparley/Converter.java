@@ -41,7 +41,7 @@ import com.soulwarelabs.jcommons.Optional;
 public interface Converter {
 
     /**
-     * Converts specified data using an SQL connection.
+     * Converts specified data using opened SQL connection.
      *
      * @param connection SQL database connection.
      * @param data data to be processed.

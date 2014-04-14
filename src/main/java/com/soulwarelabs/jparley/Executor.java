@@ -52,7 +52,7 @@ public interface Executor {
     void call(Subroutine ... subroutines) throws SQLException;
 
     /**
-     * Executes specified SQL stored function.
+     * Executes specified SQL stored function and resets it.
      *
      * @param function SQL function to be executed.
      * @param parameters initial values of function input parameters.

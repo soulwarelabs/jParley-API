@@ -66,13 +66,13 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param index parameter index.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      *
      * @see Box
      *
      * @since v1.0
      */
-    void input(int index, Box box);
+    void input(int index, Box<?> value);
 
     /**
      * Sets a new input parameter.
@@ -88,13 +88,13 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param name parameter name.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      *
      * @see Box
      *
      * @since v1.0
      */
-    void input(String name, Box box);
+    void input(String name, Box<?> value);
 
     /**
      * Sets a new input parameter.
@@ -110,14 +110,14 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param index parameter index.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      * @param type parameter SQL type code.
      *
      * @see Box
      *
      * @since v1.0
      */
-    void input(int index, Box box, int type);
+    void input(int index, Box<?> value, int type);
 
     /**
      * Sets a new input parameter.
@@ -134,14 +134,14 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param name parameter name.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      * @param type parameter SQL type code.
      *
      * @see Box
      *
      * @since v1.0
      */
-    void input(String name, Box box, int type);
+    void input(String name, Box<?> value, int type);
 
     /**
      * Sets a new input parameter.
@@ -158,7 +158,7 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param index parameter index.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      * @param encoder parameter SQL data encoder.
      *
      * @see Box
@@ -166,7 +166,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, Box box, Converter encoder);
+    void input(int index, Box<?> value, Converter encoder);
 
     /**
      * Sets a new input parameter.
@@ -185,7 +185,7 @@ public interface Subroutine {
      * Sets a new input parameter.
      *
      * @param name parameter name.
-     * @param box boxed parameter initial value.
+     * @param value boxed parameter initial value.
      * @param encoder parameter SQL data encoder.
      *
      * @see Box
@@ -193,7 +193,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, Box box, Converter encoder);
+    void input(String name, Box<?> value, Converter encoder);
 
     /**
      * Sets a new input parameter.

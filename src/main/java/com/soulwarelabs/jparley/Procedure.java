@@ -50,7 +50,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(int index, int type);
+    Box<?> output(int index, int type);
 
     /**
      * Sets a new output parameter
@@ -63,7 +63,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(String name, int type);
+    Box<?> output(String name, int type);
 
     /**
      * Sets a new output parameter
@@ -77,7 +77,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(int index, int type, String struct);
+    Box<?> output(int index, int type, String struct);
 
     /**
      * Sets a new output parameter
@@ -91,7 +91,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(String name, int type, String struct);
+    Box<?> output(String name, int type, String struct);
 
     /**
      * Sets a new output parameter
@@ -105,7 +105,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(int index, int type, Converter decoder);
+    Box<?> output(int index, int type, Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -119,7 +119,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(String name, int type, Converter decoder);
+    Box<?> output(String name, int type, Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -134,7 +134,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(int index, int type, String struct, Converter decoder);
+    Box<?> output(int index, int type, String struct, Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -149,5 +149,5 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box output(String name, int type, String struct, Converter decoder);
+    Box<?> output(String name, int type, String struct, Converter decoder);
 }
