@@ -83,6 +83,7 @@
             <groupId>com.soulwarelabs.jcommons</groupId>
             <artifactId>soulwarelabs-jcommons</artifactId>
             <version>${versions.libs.jcommons}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
