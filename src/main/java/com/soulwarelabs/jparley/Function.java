@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.06, 08 April 2014
+ * Revision: 1.07, 14 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -26,6 +26,7 @@
 package com.soulwarelabs.jparley;
 
 import com.soulwarelabs.jcommons.Box;
+import com.soulwarelabs.jcommons.Optional;
 
 /**
  * Common SQL stored function.
@@ -35,7 +36,7 @@ import com.soulwarelabs.jcommons.Box;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 08 April 2014
+ * @version 14 April 2014
  */
 public interface Function extends Subroutine {
 
@@ -49,4 +50,13 @@ public interface Function extends Subroutine {
      * @since v1.0
      */
     Box<?> getResult();
+
+    /**
+     * Adds a new input parameter.
+     *
+     * @param value parameter initial value.
+     *
+     * @since v1.0
+     */
+    void input(@Optional Object value);
 }
