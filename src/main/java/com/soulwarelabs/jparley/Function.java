@@ -25,7 +25,6 @@
  */
 package com.soulwarelabs.jparley;
 
-import com.soulwarelabs.jcommons.Box;
 import com.soulwarelabs.jcommons.Optional;
 
 /**
@@ -45,11 +44,9 @@ public interface Function extends Subroutine {
      *
      * @return boxed function result.
      *
-     * @see Box
-     *
      * @since v1.0
      */
-    Box<Object> getResult();
+    Object getResult();
 
     /**
      * Adds a new input parameter.
