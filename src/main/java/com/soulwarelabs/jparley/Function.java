@@ -49,7 +49,7 @@ public interface Function extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> getResult();
+    Box<Object> getResult();
 
     /**
      * Adds a new input parameter.

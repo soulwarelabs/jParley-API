@@ -51,7 +51,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(int index, int type);
+    Box<Object> out(int index, int type);
 
     /**
      * Sets a new output parameter
@@ -64,7 +64,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(String name, int type);
+    Box<Object> out(String name, int type);
 
     /**
      * Sets a new output parameter
@@ -78,7 +78,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(int index, int type, @Optional String struct);
+    Box<Object> out(int index, int type, @Optional String struct);
 
     /**
      * Sets a new output parameter
@@ -92,7 +92,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(String name, int type, @Optional String struct);
+    Box<Object> out(String name, int type, @Optional String struct);
 
     /**
      * Sets a new output parameter
@@ -106,7 +106,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(int index, int type, @Optional Converter decoder);
+    Box<Object> out(int index, int type, @Optional Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -120,7 +120,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(String name, int type, @Optional Converter decoder);
+    Box<Object> out(String name, int type, @Optional Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -135,7 +135,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(int index, int type, @Optional String struct,
+    Box<Object> out(int index, int type, @Optional String struct,
             @Optional Converter decoder);
 
     /**
@@ -151,6 +151,6 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> out(String name, int type, @Optional String struct,
+    Box<Object> out(String name, int type, @Optional String struct,
             @Optional Converter decoder);
 }
