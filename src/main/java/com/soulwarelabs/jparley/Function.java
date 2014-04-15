@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.07, 14 April 2014
+ * Revision: 1.08, 15 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -36,7 +36,7 @@ import com.soulwarelabs.jcommons.Optional;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 14 April 2014
+ * @version 15 April 2014
  */
 public interface Function extends Subroutine {
 
@@ -58,5 +58,5 @@ public interface Function extends Subroutine {
      *
      * @since v1.0
      */
-    void input(@Optional Object value);
+    void in(@Optional Object value);
 }

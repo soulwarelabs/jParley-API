@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.11, 14 April 2014
+ * Revision: 1.12, 15 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -37,7 +37,7 @@ import com.soulwarelabs.jcommons.Optional;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 14 April 2014
+ * @version 15 April 2014
  */
 public interface Subroutine {
 
@@ -63,7 +63,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, Box<?> value);
+    void in(int index, Box<?> value);
 
     /**
      * Sets a new input parameter.
@@ -73,7 +73,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, @Optional Object value);
+    void in(int index, @Optional Object value);
 
     /**
      * Sets a new input parameter.
@@ -85,7 +85,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, Box<?> value);
+    void in(String name, Box<?> value);
 
     /**
      * Sets a new input parameter.
@@ -95,7 +95,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, @Optional Object value);
+    void in(String name, @Optional Object value);
 
     /**
      * Sets a new input parameter.
@@ -108,7 +108,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, Box<?> value, int type);
+    void in(int index, Box<?> value, @Optional Integer type);
 
     /**
      * Sets a new input parameter.
@@ -119,7 +119,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, @Optional Object value, int type);
+    void in(int index, @Optional Object value, @Optional Integer type);
 
     /**
      * Sets a new input parameter.
@@ -132,7 +132,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, Box<?> value, int type);
+    void in(String name, Box<?> value, @Optional Integer type);
 
     /**
      * Sets a new input parameter.
@@ -143,7 +143,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, @Optional Object value, int type);
+    void in(String name, @Optional Object value, @Optional Integer type);
 
     /**
      * Sets a new input parameter.
@@ -157,7 +157,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, Box<?> value, Converter encoder);
+    void in(int index, Box<?> value, @Optional Converter encoder);
 
     /**
      * Sets a new input parameter.
@@ -170,7 +170,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(int index, @Optional Object value, Converter encoder);
+    void in(int index, @Optional Object value, @Optional Converter encoder);
 
     /**
      * Sets a new input parameter.
@@ -184,7 +184,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, Box<?> value, Converter encoder);
+    void in(String name, Box<?> value, @Optional Converter encoder);
 
     /**
      * Sets a new input parameter.
@@ -197,7 +197,7 @@ public interface Subroutine {
      *
      * @since v1.0
      */
-    void input(String name, @Optional Object value, Converter encoder);
+    void in(String name, @Optional Object value, @Optional Converter encoder);
 
     /**
      * Resets the subroutine to its initial state.

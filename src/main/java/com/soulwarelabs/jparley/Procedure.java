@@ -4,7 +4,7 @@
  *
  * File:     Procedure.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.07, 08 April 2014
+ * Revision: 1.09, 15 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -26,6 +26,7 @@
 package com.soulwarelabs.jparley;
 
 import com.soulwarelabs.jcommons.Box;
+import com.soulwarelabs.jcommons.Optional;
 
 /**
  * Common SQL stored procedure.
@@ -35,7 +36,7 @@ import com.soulwarelabs.jcommons.Box;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 08 April 2014
+ * @version 15 April 2014
  */
 public interface Procedure extends Subroutine {
 
@@ -50,7 +51,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(int index, int type);
+    Box<?> out(int index, int type);
 
     /**
      * Sets a new output parameter
@@ -63,7 +64,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(String name, int type);
+    Box<?> out(String name, int type);
 
     /**
      * Sets a new output parameter
@@ -77,7 +78,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(int index, int type, String struct);
+    Box<?> out(int index, int type, @Optional String struct);
 
     /**
      * Sets a new output parameter
@@ -91,7 +92,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(String name, int type, String struct);
+    Box<?> out(String name, int type, @Optional String struct);
 
     /**
      * Sets a new output parameter
@@ -105,7 +106,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(int index, int type, Converter decoder);
+    Box<?> out(int index, int type, @Optional Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -119,7 +120,7 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(String name, int type, Converter decoder);
+    Box<?> out(String name, int type, @Optional Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -134,7 +135,8 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(int index, int type, String struct, Converter decoder);
+    Box<?> out(int index, int type, @Optional String struct,
+            @Optional Converter decoder);
 
     /**
      * Sets a new output parameter
@@ -149,5 +151,6 @@ public interface Procedure extends Subroutine {
      *
      * @since v1.0
      */
-    Box<?> output(String name, int type, String struct, Converter decoder);
+    Box<?> out(String name, int type, @Optional String struct,
+            @Optional Converter decoder);
 }
