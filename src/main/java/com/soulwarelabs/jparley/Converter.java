@@ -4,7 +4,7 @@
  *
  * File:     Converter.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.03, 08 April 2014
+ * Revision: 1.04, 15 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -36,7 +36,7 @@ import com.soulwarelabs.jcommons.Optional;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 08 April 2014
+ * @version 15 April 2014
  */
 public interface Converter {
 
@@ -52,6 +52,6 @@ public interface Converter {
      *
      * @since v1.0
      */
-    @Optional Object process(Connection connection, @Optional Object data)
+    @Optional Object perform(Connection connection, @Optional Object data)
             throws SQLException;
 }
