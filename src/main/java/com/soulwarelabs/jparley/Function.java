@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.08, 15 April 2014
+ * Revision: 1.09, 16 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -25,8 +25,6 @@
  */
 package com.soulwarelabs.jparley;
 
-import com.soulwarelabs.jcommons.Optional;
-
 /**
  * Common SQL stored function.
  *
@@ -35,7 +33,7 @@ import com.soulwarelabs.jcommons.Optional;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 15 April 2014
+ * @version 16 April 2014
  */
 public interface Function extends Subroutine {
 
@@ -51,9 +49,9 @@ public interface Function extends Subroutine {
     /**
      * Adds a new input parameter.
      *
-     * @param value parameter initial value.
+     * @param value parameter initial value (optional).
      *
      * @since v1.0
      */
-    void in(@Optional Object value);
+    void in(Object value);
 }

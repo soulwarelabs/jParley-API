@@ -4,7 +4,7 @@
  *
  * File:     Converter.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.04, 15 April 2014
+ * Revision: 1.05, 16 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -28,15 +28,13 @@ package com.soulwarelabs.jparley;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import com.soulwarelabs.jcommons.Optional;
-
 /**
  * SQL data converter.
  *
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 15 April 2014
+ * @version 16 April 2014
  */
 public interface Converter {
 
@@ -44,14 +42,13 @@ public interface Converter {
      * Converts specified data using opened SQL connection.
      *
      * @param connection SQL database connection.
-     * @param data data to be processed.
-     * @return processed data.
+     * @param data data to be processed (optional).
+     * @return processed data (optional).
      * @throws SQLException if error occurs while processing data.
      *
      * @see Connection
      *
      * @since v1.0
      */
-    @Optional Object perform(Connection connection, @Optional Object data)
-            throws SQLException;
+    Object perform(Connection connection, Object data) throws SQLException;
 }

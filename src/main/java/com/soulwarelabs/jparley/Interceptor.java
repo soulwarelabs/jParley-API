@@ -4,7 +4,7 @@
  *
  * File:     Interceptor.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.01, 15 April 2014
+ * Revision: 1.02, 16 April 2014
  * Created:  15 February 2014
  * Author:   Ilya Gubarev
  *
@@ -34,7 +34,7 @@ import java.sql.SQLException;
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 15 April 2014
+ * @version 16 April 2014
  */
 public interface Interceptor {
 

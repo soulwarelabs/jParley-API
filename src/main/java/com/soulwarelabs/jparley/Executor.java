@@ -4,7 +4,7 @@
  *
  * File:     Executor.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.04, 08 April 2014
+ * Revision: 1.05, 16 April 2014
  * Created:  09 February 2014
  * Author:   Ilya Gubarev
  *
@@ -27,15 +27,13 @@ package com.soulwarelabs.jparley;
 
 import java.sql.SQLException;
 
-import com.soulwarelabs.jcommons.Optional;
-
 /**
  * SQL subroutines executor.
  *
  * @since v1.0
  *
  * @author Ilya Gubarev
- * @version 08 April 2014
+ * @version 16 April 2014
  */
 public interface Executor {
 
@@ -55,14 +53,13 @@ public interface Executor {
      * Executes specified SQL stored function and resets it.
      *
      * @param function SQL function to be executed.
-     * @param parameters initial values of function input parameters.
-     * @return function result.
+     * @param parameters initial values of function input parameters (optional).
+     * @return function result (optional).
      * @throws SQLException if error occurs while executing the function.
      *
      * @see Function
      *
      * @since v1.0
      */
-    @Optional Object call(Function function, @Optional Object ... parameters)
-            throws SQLException;
+    Object call(Function function, Object ... parameters) throws SQLException;
 }
