@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.13, 16 April 2014
+ * Revision: 1.14, 16 April 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -39,6 +39,24 @@ import com.soulwarelabs.jcommons.Box;
  * @version 16 April 2014
  */
 public interface Subroutine {
+
+    /**
+     * Gets full-qualified subroutine name.
+     *
+     * @return subroutine name.
+     *
+     * @since v1.0
+     */
+    String getName();
+
+    /**
+     * Sets a new full-qualified subroutine name.
+     *
+     * @param name subroutine name.
+     *
+     * @since v1.0
+     */
+    void setName(String name);
 
     /**
      * Executes the subroutine.
