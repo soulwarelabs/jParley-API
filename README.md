@@ -1,3 +1,4 @@
 jParley-API
 ===========
-jParley API components
+
+jParley framework API components
