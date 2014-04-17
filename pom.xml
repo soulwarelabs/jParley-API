@@ -72,7 +72,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <versions.java.source>1.5</versions.java.source>
         <versions.java.target>1.5</versions.java.target>
-        <versions.libs.jcommons>1.0.0-SNAPSHOT</versions.libs.jcommons>
+        <versions.libs.jcommons.api>1.0.0-SNAPSHOT</versions.libs.jcommons.api>
         <versions.plugins.compiler>3.1</versions.plugins.compiler>
         <versions.plugins.javadoc>2.9.1</versions.plugins.javadoc>
         <versions.plugins.source>2.2.1</versions.plugins.source>
@@ -80,9 +80,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.soulwarelabs</groupId>
-            <artifactId>soulwarelabs-jcommons</artifactId>
-            <version>${versions.libs.jcommons}</version>
+            <groupId>com.soulwarelabs.jcommons</groupId>
+            <artifactId>jcommons-api</artifactId>
+            <version>${versions.libs.jcommons.api}</version>
         </dependency>
     </dependencies>
 
