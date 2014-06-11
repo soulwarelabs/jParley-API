@@ -4,7 +4,7 @@
  *
  * File:     Procedure.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.10, 16 April 2014
+ * Revision: 1.12, 11 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -32,10 +32,10 @@ import com.soulwarelabs.jcommons.Box;
  *
  * @see Subroutine
  *
- * @since v1.0
+ * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 16 April 2014
+ * @version 11 June 2014
  */
 public interface Procedure extends Subroutine {
 
@@ -48,7 +48,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(int index, int type);
 
@@ -61,7 +61,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(String name, int type);
 
@@ -75,7 +75,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(int index, int type, String struct);
 
@@ -89,7 +89,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(String name, int type, String struct);
 
@@ -103,7 +103,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(int index, int type, Converter decoder);
 
@@ -117,7 +117,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(String name, int type, Converter decoder);
 
@@ -132,7 +132,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(int index, int type, String struct, Converter decoder);
 
@@ -147,7 +147,7 @@ public interface Procedure extends Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Box<Object> out(String name, int type, String struct, Converter decoder);
 }

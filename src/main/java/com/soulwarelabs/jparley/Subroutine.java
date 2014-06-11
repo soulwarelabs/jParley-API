@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.14, 16 April 2014
+ * Revision: 1.15, 11 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -33,10 +33,10 @@ import com.soulwarelabs.jcommons.Box;
 /**
  * Common SQL stored subroutine.
  *
- * @since v1.0
+ * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 16 April 2014
+ * @version 11 June 2014
  */
 public interface Subroutine {
 
@@ -45,7 +45,7 @@ public interface Subroutine {
      *
      * @return subroutine name.
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     String getName();
 
@@ -54,7 +54,7 @@ public interface Subroutine {
      *
      * @param name subroutine name.
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void setName(String name);
 
@@ -66,7 +66,7 @@ public interface Subroutine {
      *
      * @see Connection
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void execute(Connection connection) throws SQLException;
 
@@ -78,7 +78,7 @@ public interface Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Box<?> value);
 
@@ -88,7 +88,7 @@ public interface Subroutine {
      * @param index parameter index.
      * @param value parameter initial value (optional).
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Object value);
 
@@ -100,7 +100,7 @@ public interface Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(String name, Box<?> value);
 
@@ -110,7 +110,7 @@ public interface Subroutine {
      * @param name parameter name.
      * @param value parameter initial value (optional).
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(String name, Object value);
 
@@ -123,7 +123,7 @@ public interface Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Box<?> value, Integer type);
 
@@ -134,7 +134,7 @@ public interface Subroutine {
      * @param value parameter initial value (optional).
      * @param type parameter SQL type code (optional).
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Object value, Integer type);
 
@@ -147,7 +147,7 @@ public interface Subroutine {
      *
      * @see Box
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(String name, Box<?> value, Integer type);
 
@@ -172,7 +172,7 @@ public interface Subroutine {
      * @see Box
      * @see Converter
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Box<?> value, Converter encoder);
 
@@ -185,7 +185,7 @@ public interface Subroutine {
      *
      * @see Converter
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(int index, Object value, Converter encoder);
 
@@ -199,7 +199,7 @@ public interface Subroutine {
      * @see Box
      * @see Converter
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(String name, Box<?> value, Converter encoder);
 
@@ -212,14 +212,14 @@ public interface Subroutine {
      *
      * @see Converter
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void in(String name, Object value, Converter encoder);
 
     /**
      * Resets the subroutine to its initial state.
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     void reset();
 }

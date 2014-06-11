@@ -4,7 +4,7 @@
  *
  * File:     Converter.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.05, 16 April 2014
+ * Revision: 1.06, 11 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -30,25 +30,31 @@ import java.sql.SQLException;
 
 /**
  * SQL data converter.
+ * <p>
+ * The converter performs data transformation on an opened SQL database
+ * connection. Can be used to encode Java data type into SQL structure
+ * and vice versa.
+ * <p>
+ * Designed to be thread-safe.
  *
- * @since v1.0
+ * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 16 April 2014
+ * @version 11 June 2014
  */
 public interface Converter {
 
     /**
-     * Converts specified data using opened SQL connection.
+     * Transforms specified data using opened SQL connection.
      *
      * @param connection SQL database connection.
-     * @param data data to be processed (optional).
-     * @return processed data (optional).
-     * @throws SQLException if error occurs while processing data.
+     * @param data data to be transformed (optional).
+     * @return transformed data (optional).
+     * @throws SQLException if error occurs while performing transformation.
      *
      * @see Connection
      *
-     * @since v1.0
+     * @since v1.0.0
      */
     Object perform(Connection connection, Object data) throws SQLException;
 }
