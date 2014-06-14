@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.10, 11 June 2014
+ * Revision: 1.11, 14 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -33,7 +33,7 @@ package com.soulwarelabs.jparley;
  * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 11 June 2014
+ * @version 14 June 2014
  */
 public interface Function extends Subroutine {
 
@@ -45,13 +45,4 @@ public interface Function extends Subroutine {
      * @since v1.0.0
      */
     Object getResult();
-
-    /**
-     * Adds a new input parameter.
-     *
-     * @param value parameter initial value (optional).
-     *
-     * @since v1.0.0
-     */
-    void in(Object value);
 }
