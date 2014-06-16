@@ -4,7 +4,7 @@
  *
  * File:     Converter.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.06, 11 June 2014
+ * Revision: 1.07, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -33,14 +33,14 @@ import java.sql.SQLException;
  * <p>
  * The converter performs data transformation on an opened SQL database
  * connection. Can be used to encode Java data type into SQL structure
- * and vice versa.
+ * or vice versa.
  * <p>
  * Designed to be thread-safe.
  *
  * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 11 June 2014
+ * @version 16 June 2014
  */
 public interface Converter {
 
