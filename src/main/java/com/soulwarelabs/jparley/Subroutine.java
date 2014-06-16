@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.18, 16 June 2014
+ * Revision: 1.19, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -142,6 +142,35 @@ public interface Subroutine {
      * @since v1.0.0
      */
     void in(int index, Object value, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param value boxed parameter initial value.
+     * @param encoder parameter SQL data encoder (optional).
+     * @param type parameter SQL type code (optional).
+     *
+     * @see Box
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(int index, Box<?> value, Integer type, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param index parameter index.
+     * @param value parameter initial value (optional).
+     * @param encoder parameter SQL data encoder (optional).
+     * @param type parameter SQL type code (optional).
+     *
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(int index, Object value, Integer type, Converter encoder);
 
     /**
      * Removes specified parameter.
