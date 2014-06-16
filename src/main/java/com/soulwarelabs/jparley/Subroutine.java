@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.15, 11 June 2014
+ * Revision: 1.17, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -36,7 +36,7 @@ import com.soulwarelabs.jcommons.Box;
  * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 11 June 2014
+ * @version 16 June 2014
  */
 public interface Subroutine {
 
@@ -95,28 +95,6 @@ public interface Subroutine {
     /**
      * Sets a new input parameter.
      *
-     * @param name parameter name.
-     * @param value boxed parameter initial value.
-     *
-     * @see Box
-     *
-     * @since v1.0.0
-     */
-    void in(String name, Box<?> value);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name parameter name.
-     * @param value parameter initial value (optional).
-     *
-     * @since v1.0.0
-     */
-    void in(String name, Object value);
-
-    /**
-     * Sets a new input parameter.
-     *
      * @param index parameter index.
      * @param value boxed parameter initial value.
      * @param type parameter SQL type code (optional).
@@ -137,30 +115,6 @@ public interface Subroutine {
      * @since v1.0.0
      */
     void in(int index, Object value, Integer type);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name parameter name.
-     * @param value boxed parameter initial value.
-     * @param type parameter SQL type code (optional).
-     *
-     * @see Box
-     *
-     * @since v1.0.0
-     */
-    void in(String name, Box<?> value, Integer type);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name parameter name.
-     * @param value parameter initial value (optional).
-     * @param type parameter SQL type code (optional).
-     *
-     * @since v1.0
-     */
-    void in(String name, Object value, Integer type);
 
     /**
      * Sets a new input parameter.
@@ -190,31 +144,13 @@ public interface Subroutine {
     void in(int index, Object value, Converter encoder);
 
     /**
-     * Sets a new input parameter.
+     * Removes specified parameter.
      *
-     * @param name parameter name.
-     * @param value boxed parameter initial value.
-     * @param encoder parameter SQL data encoder (optional).
-     *
-     * @see Box
-     * @see Converter
+     * @param index parameter index.
      *
      * @since v1.0.0
      */
-    void in(String name, Box<?> value, Converter encoder);
-
-    /**
-     * Sets a new input parameter.
-     *
-     * @param name parameter name.
-     * @param value parameter initial value (optional).
-     * @param encoder parameter SQL data encoder (optional).
-     *
-     * @see Converter
-     *
-     * @since v1.0.0
-     */
-    void in(String name, Object value, Converter encoder);
+    void remove(int index);
 
     /**
      * Resets the subroutine to its initial state.
