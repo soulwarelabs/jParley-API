@@ -4,7 +4,7 @@
  *
  * File:     Procedure.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.13, 16 June 2014
+ * Revision: 1.14, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -111,6 +111,35 @@ public interface Procedure extends Subroutine {
      * @since v1.0.0
      */
     void in(String name, Object value, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value boxed parameter initial value.
+     * @param encoder parameter SQL data encoder (optional).
+     * @param type parameter SQL type code (optional).
+     *
+     * @see Box
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Box<?> value, Integer type, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value (optional).
+     * @param encoder parameter SQL data encoder (optional).
+     * @param type parameter SQL type code (optional).
+     *
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Object value, Integer type, Converter encoder);
 
     /**
      * Sets a new output parameter
