@@ -4,7 +4,7 @@
  *
  * File:     Procedure.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.12, 11 June 2014
+ * Revision: 1.13, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -35,9 +35,82 @@ import com.soulwarelabs.jcommons.Box;
  * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 11 June 2014
+ * @version 16 June 2014
  */
 public interface Procedure extends Subroutine {
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value boxed parameter initial value.
+     *
+     * @see Box
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Box<?> value);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value (optional).
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Object value);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value boxed parameter initial value.
+     * @param type parameter SQL type code (optional).
+     *
+     * @see Box
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Box<?> value, Integer type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value (optional).
+     * @param type parameter SQL type code (optional).
+     *
+     * @since v1.0
+     */
+    void in(String name, Object value, Integer type);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value boxed parameter initial value.
+     * @param encoder parameter SQL data encoder (optional).
+     *
+     * @see Box
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Box<?> value, Converter encoder);
+
+    /**
+     * Sets a new input parameter.
+     *
+     * @param name parameter name.
+     * @param value parameter initial value (optional).
+     * @param encoder parameter SQL data encoder (optional).
+     *
+     * @see Converter
+     *
+     * @since v1.0.0
+     */
+    void in(String name, Object value, Converter encoder);
 
     /**
      * Sets a new output parameter
@@ -150,4 +223,13 @@ public interface Procedure extends Subroutine {
      * @since v1.0.0
      */
     Box<Object> out(String name, int type, String struct, Converter decoder);
+
+    /**
+     * Removes specified parameter.
+     *
+     * @param name parameter name.
+     *
+     * @since v1.0.0
+     */
+    void remove(String name);
 }
