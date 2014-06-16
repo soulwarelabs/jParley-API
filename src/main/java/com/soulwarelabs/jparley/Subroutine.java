@@ -4,7 +4,7 @@
  *
  * File:     Subroutine.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.17, 16 June 2014
+ * Revision: 1.18, 16 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -153,9 +153,9 @@ public interface Subroutine {
     void remove(int index);
 
     /**
-     * Resets the subroutine to its initial state.
+     * Removes all parameters.
      *
      * @since v1.0.0
      */
-    void reset();
+    void removeAll();
 }
