@@ -4,7 +4,7 @@
  *
  * File:     Function.java
  * Folder:   /.../com/soulwarelabs/jparley
- * Revision: 1.14, 16 June 2014
+ * Revision: 1.15, 17 June 2014
  * Created:  08 February 2014
  * Author:   Ilya Gubarev
  *
@@ -35,12 +35,12 @@ import com.soulwarelabs.jcommons.Box;
  * @since v1.0.0
  *
  * @author Ilya Gubarev
- * @version 16 June 2014
+ * @version 17 June 2014
  */
 public interface Function extends Subroutine {
 
     /**
-     * Gets function result SQL data decoder (optional).
+     * Gets function result SQL data decoder.
      *
      * @return SQL data decoder (optional).
      *
@@ -51,7 +51,7 @@ public interface Function extends Subroutine {
     Converter getDecoder();
 
     /**
-     * Sets function result SQL data decoder (optional).
+     * Sets function result SQL data decoder.
      *
      * @param decoder SQL data decoder (optional).
      *
